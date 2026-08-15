@@ -156,7 +156,9 @@
     .service-num{font-size:8px;letter-spacing:.18em;color:#6c6c6c}
     .service h3{font-family:'Roboto Slab',serif;font-size:clamp(28px,2.8vw,44px);font-weight:800;line-height:1.02;letter-spacing:-.035em;margin:0}
     .service p{max-width:470px;margin:8px 0 0;color:#8c8780;font-size:12px;line-height:1.65}
-    .service-arrow{font-size:18px;color:#747474;transition:transform .2s,color .2s}
+    .service-arrow{position:relative;width:18px;height:18px;color:#747474;transition:transform .2s,color .2s}
+    .service-arrow::before{content:"";position:absolute;top:8px;left:2px;width:13px;height:1px;background:currentColor;transform:rotate(-45deg);transform-origin:center}
+    .service-arrow::after{content:"";position:absolute;top:2px;right:1px;width:7px;height:7px;border-top:1px solid currentColor;border-right:1px solid currentColor}
     .service:hover .service-arrow{transform:translateX(4px);color:#fff}
     .future-note{display:flex;align-items:center;gap:10px;margin-top:28px;font-size:8px;letter-spacing:.17em;text-transform:uppercase;color:#696969}
     .future-note:before{content:"";width:20px;height:1px;background:var(--red)}
@@ -166,7 +168,7 @@
     .reputation-grid{display:grid;grid-template-columns:.74fr 1.26fr;min-height:610px}
     .score{padding:92px 6vw;display:flex;flex-direction:column;justify-content:space-between;border-right:1px solid rgba(10,10,10,.12)}
     .score-number{font-family:'Roboto Slab',serif;font-size:clamp(118px,12vw,180px);line-height:.80;letter-spacing:-.065em;margin-top:22px;font-weight:900}
-    .score-stars{font-size:14px;letter-spacing:.20em;margin-top:14px}
+    .score-source{margin-top:14px;font-size:9px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#777}
     .score-note{max-width:300px;color:#756f68;font-size:10px;line-height:1.65}
     .reputation-copy{padding:92px 7vw;display:flex;flex-direction:column;justify-content:space-between}
     .reputation-copy blockquote{margin:0;max-width:840px;font-family:'Roboto Slab',serif;font-size:clamp(38px,4.4vw,68px);line-height:1.08;letter-spacing:-.035em;font-weight:700}
@@ -373,19 +375,19 @@
 
       <div class="service-list" data-reveal>
         <a class="service" href="https://wa.me/34602476032?text=Hola%2C%20quiero%20reservar%20un%20corte%20y%20degradado" target="_blank" rel="noopener">
-          <span class="service-num">01</span><div><h3 data-i18n="s1.title">Corte &amp; degradado</h3><p data-i18n="s1.copy">Corte de caballero, degradado y acabado personalizado.</p></div><span class="service-arrow">↗</span>
+          <span class="service-num">01</span><div><h3 data-i18n="s1.title">Corte &amp; degradado</h3><p data-i18n="s1.copy">Corte de caballero, degradado y acabado personalizado.</p></div><span class="service-arrow" aria-hidden="true"></span>
         </a>
         <a class="service" href="https://wa.me/34602476032?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20barba" target="_blank" rel="noopener">
-          <span class="service-num">02</span><div><h3 data-i18n="s2.title">Barba</h3><p data-i18n="s2.copy">Arreglo, perfilado y acabado limpio y definido.</p></div><span class="service-arrow">↗</span>
+          <span class="service-num">02</span><div><h3 data-i18n="s2.title">Barba</h3><p data-i18n="s2.copy">Arreglo, perfilado y acabado limpio y definido.</p></div><span class="service-arrow" aria-hidden="true"></span>
         </a>
         <a class="service" href="https://wa.me/34602476032?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20color" target="_blank" rel="noopener">
-          <span class="service-num">03</span><div><h3 data-i18n="s3.title">Color &amp; mechas</h3><p data-i18n="s3.copy">Coloración adaptada al estilo y al resultado buscado.</p></div><span class="service-arrow">↗</span>
+          <span class="service-num">03</span><div><h3 data-i18n="s3.title">Color &amp; mechas</h3><p data-i18n="s3.copy">Coloración adaptada al estilo y al resultado buscado.</p></div><span class="service-arrow" aria-hidden="true"></span>
         </a>
         <a class="service" href="https://wa.me/34602476032?text=Hola%2C%20quiero%20reservar%20un%20peinado" target="_blank" rel="noopener">
-          <span class="service-num">04</span><div><h3 data-i18n="s4.title">Peinado</h3><p data-i18n="s4.copy">Acabado final para el día a día o para una ocasión especial.</p></div><span class="service-arrow">↗</span>
+          <span class="service-num">04</span><div><h3 data-i18n="s4.title">Peinado</h3><p data-i18n="s4.copy">Acabado final para el día a día o para una ocasión especial.</p></div><span class="service-arrow" aria-hidden="true"></span>
         </a>
         <a class="service" href="https://wa.me/34602476032?text=Hola%2C%20quiero%20reservar%20un%20servicio%20de%20cejas" target="_blank" rel="noopener">
-          <span class="service-num">05</span><div><h3 data-i18n="s5.title">Cejas</h3><p data-i18n="s5.copy">Cuidado y definición para un resultado equilibrado.</p></div><span class="service-arrow">↗</span>
+          <span class="service-num">05</span><div><h3 data-i18n="s5.title">Cejas</h3><p data-i18n="s5.copy">Cuidado y definición para un resultado equilibrado.</p></div><span class="service-arrow" aria-hidden="true"></span>
         </a>
       </div>
     </div>
@@ -397,7 +399,7 @@
         <div>
           <div class="kicker" data-i18n="rep.kicker">03 — Reputación</div>
           <div class="score-number">4.2</div>
-          <div class="score-stars">★★★★★</div>
+          <div class="score-source" data-i18n="rep.rating">Valoración en Google</div>
         </div>
         <p class="score-note" data-i18n="rep.note">Valoración pública del negocio. Atención, claridad y una experiencia sencilla de principio a fin.</p>
       </div>
@@ -446,9 +448,9 @@
           </div>
 
           <div class="visit-actions">
-            <a class="ghost-btn" href="https://www.google.com/maps/search/?api=1&query=BARBER+SHOP+PUERTO+BANUS+SAMER" target="_blank" rel="noopener" data-i18n="visit.map">Cómo llegar ↗</a>
+            <a class="ghost-btn" href="https://www.google.com/maps/search/?api=1&query=BARBER+SHOP+PUERTO+BANUS+SAMER" target="_blank" rel="noopener" data-i18n="visit.map">Cómo llegar</a>
             <a class="ghost-btn" href="tel:+34602476032" data-i18n="visit.call">Llamar</a>
-            <a class="ghost-btn" href="https://www.instagram.com/sam__dicee/" target="_blank" rel="noopener">Instagram ↗</a>
+            <a class="ghost-btn" href="https://www.instagram.com/sam__dicee/" target="_blank" rel="noopener">Instagram</a>
           </div>
         </div>
       </div>
@@ -463,7 +465,7 @@
       <a class="btn" href="tel:+34602476032" data-i18n="final.call">Llamar</a>
     </div>
     <div class="footer">
-      <span>© 2026 Samer · Puerto Banús</span>
+      <span>2026 Samer · Puerto Banús</span>
       <span class="center">SAMER.</span>
       <span>Marbella · Málaga</span>
     </div>
@@ -535,6 +537,7 @@
       's5.copy':'Cuidado y definición para un resultado equilibrado.',
 
       'rep.kicker':'03 — Reputación',
+      'rep.rating':'Valoración en Google',
       'rep.note':'Valoración pública del negocio. Atención, claridad y una experiencia sencilla de principio a fin.',
       'rep.quote':'Cuidado en el detalle, desde que entras hasta que sales.',
       'rep.p1Title':'Precisión',
@@ -551,7 +554,7 @@
       'visit.areaLabel':'Zona',
       'visit.contactLabel':'Contacto',
       'visit.contactValue':'WhatsApp · Llamada · Instagram',
-      'visit.map':'Cómo llegar ↗',
+      'visit.map':'Cómo llegar',
       'visit.call':'Llamar',
 
       'final.label':'Citas · Puerto Banús',
@@ -606,6 +609,7 @@
       's5.copy':'Care and definition for a balanced result.',
 
       'rep.kicker':'03 — Reputation',
+      'rep.rating':'Google rating',
       'rep.note':'Public rating for the business. Attention, clarity and a simple experience from start to finish.',
       'rep.quote':'Attention to detail, from the moment you walk in to the moment you leave.',
       'rep.p1Title':'Precision',
@@ -622,7 +626,7 @@
       'visit.areaLabel':'Area',
       'visit.contactLabel':'Contact',
       'visit.contactValue':'WhatsApp · Phone · Instagram',
-      'visit.map':'Directions ↗',
+      'visit.map':'Directions',
       'visit.call':'Call',
 
       'final.label':'Appointments · Puerto Banús',
